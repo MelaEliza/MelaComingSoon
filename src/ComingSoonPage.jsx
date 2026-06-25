@@ -14,7 +14,7 @@ const Icon = ({ name, size = 28 }) => {
     camera: <><path d="M14.5 5 16 7h4a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h4l1.5-2h5Z"/><circle cx="12" cy="13" r="4"/></>,
     spark: <><path d="m12 2 1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2Z"/><path d="m19 16 .7 2.3L22 19l-2.3.7L19 22l-.7-2.3L16 19l2.3-.7L19 16Z"/></>,
     instagram: <><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></>,
-    pinterest: <path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-1.6 0-3.4.4-4.8l1.3-5.4s-.3-.8-.3-1.9c0-1.8 1-3.1 2.4-3.1 1.1 0 1.7.8 1.7 1.9 0 1.1-.7 2.7-1.1 4.2-.3 1.3.7 2.4 2 2.4 2.4 0 4-3 4-6.5 0-2.7-2.2-4.8-5.5-4.8-4 0-6.5 3-6.5 6.3 0 1.2.4 2.4 1 3.1.1.1.1.2.1.4l-.4 1.5c-.1.5-.5.6-.9.4-2.1-.9-3.1-3.3-3.1-6 0-4.5 3.8-9.8 11.2-9.8 6 0 9.9 4.4 9.9 9.1 0 6.2-3.4 10.9-8.4 10.9-1.7 0-3.3-.9-3.8-1.9l-1 3.9c-.4 1.4-1.1 2.8-1.7 3.9.8.2 1.6.3 2.5.3A10 10 0 0 0 12 2Z"/>,
+    tiktok: <><path d="M14 3v10.3a4.2 4.2 0 1 1-3.5-4.1"/><path d="M14 5.8c1.2 2.4 3 3.8 5.5 4"/></>,
     mail: <><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></>,
   };
   return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.35" strokeLinecap="round" strokeLinejoin="round">{paths[name]}</svg>;
@@ -102,9 +102,9 @@ export function Footer() {
   return <footer className="footer">
     <span>Launching Soon</span><i aria-hidden="true">◆</i>
     <div className="socials"><span>Stay Connected</span>
-      <a href="#instagram" aria-label="Instagram"><Icon name="instagram" size={16}/></a>
-      <a href="#pinterest" aria-label="Pinterest"><Icon name="pinterest" size={16}/></a>
-      <a href="mailto:hello@melaeliza.com" aria-label="Email"><Icon name="mail" size={16}/></a>
+      <a href="https://www.instagram.com/themelaeliza" aria-label="Instagram" target="_blank" rel="noreferrer"><Icon name="instagram" size={16}/></a>
+      <a href="https://www.tiktok.com/@themelaeliza" aria-label="TikTok" target="_blank" rel="noreferrer"><Icon name="tiktok" size={16}/></a>
+      <a href="mailto:inquiries@melaeliza.com" aria-label="Email"><Icon name="mail" size={16}/></a>
     </div>
   </footer>;
 }
