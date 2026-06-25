@@ -65,7 +65,10 @@ export function EmailSignupForm() {
 export function HeroSection() {
   return <section className="hero">
     <header className="header">
-      <a className="brand" href="#top" aria-label="Mela Eliza home"><strong>Mela Eliza</strong><span>Editorial Muse</span></a>
+      <a className="brand" href="#top" aria-label="Mela Eliza home">
+        <img className="brand-logo" src="/images/mela-eliza-logo.png" alt="Mela Eliza" />
+        <span>Editorial Muse</span>
+      </a>
       <div className="header-note"><span>Style. Beauty. Luxe.</span><i>✦</i></div>
     </header>
     <div className="hero-grid">
