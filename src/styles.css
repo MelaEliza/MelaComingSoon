@@ -35,6 +35,7 @@ h1 { white-space: nowrap; margin: 0 0 4px; color: var(--soft-gold); text-transfo
 .signup button { height: 72px; min-width: 265px; cursor: pointer; border: 1px solid var(--burnt-orange); background: var(--burnt-orange); color: var(--cream); text-transform: uppercase; letter-spacing: .2em; font-size: 12px; font-weight: 500; transition: background .25s, border .25s, color .25s; }
 .signup button span { padding-left: 12px; font-size: 15px; }
 .signup button:hover { background: #a94420; border-color: var(--soft-gold); }
+.signup button:disabled { cursor: wait; opacity: .72; }
 .signup input:focus, .signup button:focus-visible, .footer a:focus-visible { outline: 2px solid var(--soft-gold); outline-offset: 3px; }
 .form-message { min-height: 18px; margin: 9px 0 0; font-size: 10px; letter-spacing: .03em; }
 .form-message.error { color: #f2a98c; }.form-message.success { color: var(--stone); }
