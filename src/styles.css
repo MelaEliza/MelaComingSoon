@@ -73,6 +73,7 @@ h1 { white-space: nowrap; margin: 0 0 4px; color: var(--soft-gold); text-transfo
   .portrait[data-hero="3"] img { object-position: 57% 8%; transform: scale(1.56) translateX(-15%); transform-origin: center top; }
   .portrait[data-hero="4"] img { object-position: 54% 7%; transform: scale(1.08) translateY(-1%); }
   .portrait[data-hero="5"] img { object-position: 50% 8%; transform: scale(1.12) translateX(-2%); transform-origin: center top; }
+  .portrait[data-hero="6"] img { object-position: 56% 24%; transform: scale(1.55) translate(-8%, -13%); transform-origin: center top; }
   .portrait-wash { background: linear-gradient(0deg, var(--espresso-dark) 0%, rgb(18 12 10 / .48) 13%, transparent 42%), linear-gradient(90deg, rgb(18 12 10 / .18), transparent 35%); }
   h1 { white-space: normal; font-size: clamp(52px, 17vw, 74px); line-height: .84; letter-spacing: .018em; }
   .ornament { margin: 18px 0 15px; max-width: 430px; }

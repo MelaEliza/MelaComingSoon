@@ -4,8 +4,9 @@ const heroImages = [
   { src: '/images/mela-mockup-crop-1.png', mobileSrc: '/images/mela-silk-1.jpg' },
   { src: '/images/mela-mockup-crop-2-v2.png', mobileSrc: '/images/mela-silk-4.jpg' },
   { src: '/images/mela-mockup-crop-3.png', mobileSrc: '/images/mela-silk-5.jpg' },
-  { src: '/images/mela-mockup-crop-4.png', mobileSrc: '/images/mela-silk-4.jpg' },
+  { src: '/images/mela-mockup-crop-4.png', mobileSrc: '/images/mela-mobile-hero-4.png' },
   { src: '/images/mela-mockup-crop-5.png', mobileSrc: '/images/mela-mobile-hero-5.png' },
+  { src: '/images/mela-mockup-crop-red.png', mobileSrc: '/images/mela-mobile-hero-red.jpg' },
 ];
 
 const Icon = ({ name, size = 28 }) => {
