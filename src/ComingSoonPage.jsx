@@ -5,7 +5,7 @@ const heroImages = [
   { src: '/images/mela-mockup-crop-2-v2.png', mobileSrc: '/images/mela-silk-4.jpg' },
   { src: '/images/mela-mockup-crop-3.png', mobileSrc: '/images/mela-silk-5.jpg' },
   { src: '/images/mela-mockup-crop-4.png', mobileSrc: '/images/mela-silk-4.jpg' },
-  { src: '/images/mela-mockup-crop-5.png', mobileSrc: '/images/mela-silk-2.jpg' },
+  { src: '/images/mela-mockup-crop-5.png', mobileSrc: '/images/mela-mobile-hero-5.png' },
 ];
 
 const Icon = ({ name, size = 28 }) => {
