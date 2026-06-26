@@ -44,9 +44,10 @@ export function EmailSignupForm() {
   const [status, setStatus] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  async function submit(event) {
+  function submit(event) {
     event.preventDefault();
-    const email = new FormData(event.currentTarget).get('email').trim();
+    const form = event.currentTarget;
+    const email = new FormData(form).get('entry.88646790').trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setStatus('error'); setMessage('Please enter a valid email address.'); return;
     }
@@ -55,32 +56,26 @@ export function EmailSignupForm() {
     setStatus('');
     setMessage('');
 
-    const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSd9rfWyFfyNc3YnY_v5buk6RMqfo9uWNskmhB0dZaBLQayA1g/formResponse';
-    const body = new URLSearchParams({
-      'entry.88646790': email,
-    });
-
-    try {
-      await fetch(googleFormUrl, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body,
-      });
+    HTMLFormElement.prototype.submit.call(form);
+    window.setTimeout(() => {
       setStatus('success');
       setMessage('You’re on the list. The Mela Eliza experience is coming soon.');
-      event.currentTarget.reset();
-    } catch {
-      setStatus('error');
-      setMessage('Something went wrong. Please try again in a moment.');
-    } finally {
+      form.reset();
       setIsSubmitting(false);
-    }
+    }, 700);
   }
   return <div className="form-wrap">
-    <form className="signup" onSubmit={submit} noValidate>
+    <iframe className="sr-only" title="Mela Eliza waitlist submission" name="mela-waitlist-submission" />
+    <form
+      className="signup"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSd9rfWyFfyNc3YnY_v5buk6RMqfo9uWNskmhB0dZaBLQayA1g/formResponse"
+      method="POST"
+      target="mela-waitlist-submission"
+      onSubmit={submit}
+      noValidate
+    >
       <label className="sr-only" htmlFor="email">Email address</label>
-      <input id="email" name="email" type="email" autoComplete="email" placeholder="Enter your email" aria-describedby="form-message" aria-invalid={status === 'error'} />
+      <input id="email" name="entry.88646790" type="email" autoComplete="email" placeholder="Enter your email" aria-describedby="form-message" aria-invalid={status === 'error'} />
       <button type="submit" disabled={isSubmitting}>{isSubmitting ? 'Joining…' : 'Join the list'} <span aria-hidden="true">→</span></button>
     </form>
     <p id="form-message" className={`form-message ${status}`} aria-live="polite">{message}</p>
