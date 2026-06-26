@@ -97,7 +97,7 @@ export function HeroSection() {
         <div className="ornament"><span /><i>◆</i><span /></div>
         <p className="tagline">Style. Beauty. Luxe.</p>
         <p className="services-line">Wardrobe Styling <b>•</b> Image &amp; Identity Curation <b>•</b> Confidence Coaching</p>
-        <p className="intro">A refined digital experience is on its way.<br/>Join the list for launch updates.</p>
+        <p className="intro">Something beautiful is taking shape.<br/>Be the first to know when we arrive.</p>
         <EmailSignupForm />
       </div>
       <RandomHeroImage />
